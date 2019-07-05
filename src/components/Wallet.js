@@ -11,5 +11,4 @@ export class Wallet extends Component {
   }
 }
 
-// export default connect(state => { balance: state }, null)(Wallet); // connect( map state to props part, null - second part not needed atm)
-// looks like this isn't needed atm because we are passing the balance down through props
+export default connect(state => { return { balance: state }}, null)(Wallet); // connect( map state to props part, null - second part not needed atm)
