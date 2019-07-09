@@ -9,9 +9,13 @@ describe('App', () => {
     expect(app).toMatchSnapshot();
   })
 
-  it('contains a Wallet component', () => {
+  it('contains a connected Wallet component', () => {
     // console.log(app.debug()); // way to check what component is actually getting brought in - it's Connect(Wallet)
 
     expect(app.find('Connect(Wallet)').exists()).toBe(true);
+  })
+
+  it('contains a connected Loot component', () => {
+    expect(app.find('Connect(Loot)').exists()).toBe(true);
   })
 })
